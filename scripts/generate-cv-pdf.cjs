@@ -83,7 +83,7 @@ body(doc);
 doc.font("Helvetica-Bold").text("INTRAGUARD — Software Developer");
 doc.font("Helvetica-Oblique").text("Remote, UK based    Sep 2025 — Present");
 bullet(doc, "Developed and maintained full-stack MERN web applications with a focus on scalability.");
-bullet(doc, "Contributed to an industry-level product with GraphQL API integration.");
+bullet(doc, "Contributed to an industry-level website with GraphQL API integration.");
 doc.moveDown(0.35);
 
 body(doc);
@@ -135,7 +135,7 @@ doc.font("Helvetica-Bold").text("Portfolio site");
 doc.font("Helvetica").fontSize(9);
 bullet(
   doc,
-  "Next.js 15 portfolio (MERN & DevOps showcase): porfolio-alpha-murex.vercel.app — github.com/ihamidch/porfolio-",
+  "Next.js 15 portfolio (MERN & DevOps showcase): porfolio-ihamidchs-projects.vercel.app — github.com/ihamidch/porfolio-",
 );
 doc.moveDown(0.25);
 body(doc);

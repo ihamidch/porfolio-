@@ -466,8 +466,8 @@ export default function Home() {
               </p>
               <p className="text-sm text-zinc-400">
                 Software Developer at IntraGuard (UK-based, Remote)
-              </p>
-            </div>
+          </p>
+        </div>
             <div className="flex flex-col gap-3 text-sm">
               <a
                 className="text-cyan-300 underline-offset-4 hover:underline"
@@ -484,21 +484,21 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 pt-2">
                 <a
                   href="https://www.linkedin.com/in/hamid-rafique-a75b9a3a5"
-                  target="_blank"
+            target="_blank"
                   rel="noreferrer"
                   className="font-medium text-zinc-200 underline-offset-4 hover:text-cyan-300 hover:underline"
                 >
                   LinkedIn
-                </a>
-                <a
+          </a>
+          <a
                   href="https://github.com/ihamidch"
-                  target="_blank"
+            target="_blank"
                   rel="noreferrer"
                   className="font-medium text-zinc-200 underline-offset-4 hover:text-cyan-300 hover:underline"
-                >
+          >
                   GitHub
-                </a>
-              </div>
+          </a>
+        </div>
             </div>
           </div>
         </motion.section>

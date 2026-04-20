@@ -1,5 +1,10 @@
 This is a professional portfolio built with Next.js (App Router), Tailwind CSS, and Framer Motion.
 
+## Live Demo
+
+- **App (Portfolio):** [https://porfolio-ihamidchs-projects.vercel.app](https://porfolio-ihamidchs-projects.vercel.app)
+- **Repository:** [https://github.com/ihamidch/porfolio-](https://github.com/ihamidch/porfolio-)
+
 ## Getting Started
 
 Install dependencies and run the development server:
