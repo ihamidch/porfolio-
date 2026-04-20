@@ -25,16 +25,22 @@ Source LaTeX (for print-quality PDF via `pdflatex` on your machine): **`public/H
 
 MERN and DevOps cards open **deployed** URLs. The MERN section lists three production apps—**E‑commerce**, **Freelancer Marketplace**, and **TalentScout AI**—each with its own Vercel frontend and API. FlowBoard and other APIs still appear under DevOps. Override URLs with `NEXT_PUBLIC_LIVE_*` in `.env.local` (see `lib/portfolio-data.ts`).
 
-## Deploy to Vercel
+## Deploy to Vercel (same flow as your other apps)
 
-1. Push this project to GitHub.
-2. Import the repository in [Vercel](https://vercel.com/new).
-3. Use default build settings (`next build`).
-4. Deploy.
+This repo is a **single Next.js app at the root** — like connecting **TalentScout** or **E‑commerce**, but **Root Directory = `.`** (not `client/` or `server/`).
 
-Or deploy with Vercel CLI:
+1. Push `main` to [github.com/ihamidch/porfolio-](https://github.com/ihamidch/porfolio-).
+2. [Vercel → Add New → Project](https://vercel.com/new) → **Import** `porfolio-`.
+3. **Framework Preset:** Next.js (auto). **Root Directory:** `.` (leave default).
+4. **Build:** `npm run build` (default; `vercel.json` uses `npm ci` for installs).
+5. **Deploy.** Future pushes to `main` auto-deploy if Git integration is enabled.
+
+Optional env vars (only if you change live demo URLs): set `NEXT_PUBLIC_LIVE_*` in the Vercel project to match `lib/portfolio-data.ts`.
+
+### Vercel CLI (optional)
 
 ```bash
-npm i -g vercel
-vercel
+cd ~/porfolio
+npx vercel@latest login
+npx vercel@latest deploy --prod
 ```
