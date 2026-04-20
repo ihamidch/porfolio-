@@ -11,19 +11,19 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## CV Download Link
+## CV (Download CV button)
 
-Place your PDF CV at:
+The site serves **`public/Hamid-Rafique-CV.pdf`**. Regenerate it after editing content in **`scripts/generate-cv-pdf.cjs`**:
 
 ```bash
-public/Hamid-Rafique-CV.pdf
+npm run cv:pdf
 ```
 
-The "Download CV" button on the website points to this file.
+Source LaTeX (for print-quality PDF via `pdflatex` on your machine): **`public/Hamid-Rafique-CV.tex`**.
 
 ## Live project URLs
 
-MERN and DevOps cards open **deployed** URLs. The MERN section lists three production apps—**Ecommerece** (`ecommerece-mern-web` + `backend-two-weld-46`), **Freelancer-Marketplace** (`frontend-kappa-amber-29` + `backend-pi-khaki-68`), and **FlowBoard** (`client-eight-puce-44` + `server-xi-khaki-22`)—each repo uses only its own Vercel URLs. Override any URL by copying `.env.local.example` to `.env.local` and setting the `NEXT_PUBLIC_LIVE_*` variables.
+MERN and DevOps cards open **deployed** URLs. The MERN section lists three production apps—**E‑commerce**, **Freelancer Marketplace**, and **TalentScout AI**—each with its own Vercel frontend and API. FlowBoard and other APIs still appear under DevOps. Override URLs with `NEXT_PUBLIC_LIVE_*` in `.env.local` (see `lib/portfolio-data.ts`).
 
 ## Deploy to Vercel
 

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cv:pdf": "node scripts/generate-cv-pdf.cjs"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
@@ -21,6 +22,7 @@
     "@types/react-dom": "^18.3.7",
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.5.15",
+    "pdfkit": "^0.18.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
