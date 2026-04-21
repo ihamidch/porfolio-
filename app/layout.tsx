@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Hamid Rafique | MERN Stack Developer · React · Node · MongoDB",
   description:
-    "MERN stack developer portfolio — production React & Node apps, MongoDB, Express, GraphQL, DevOps on Vercel & AWS. ~1 year shipping full-stack products.",
+    "MERN Stack Developer — scalable full-stack web apps with authentication, REST APIs, and modern UI. 3+ deployed projects, production-ready code.",
 };
 
 export default function RootLayout({

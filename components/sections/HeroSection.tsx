@@ -20,15 +20,32 @@ export function HeroSection() {
             Open to opportunities · {siteConfig.location}
           </div>
 
-          <h1 className="max-w-4xl text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            <span className="bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent">
-              {siteConfig.headline}
-            </span>
-          </h1>
+          <div className="space-y-4">
+            <p className="text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
+              {siteConfig.greeting}
+            </p>
+            <h1 className="max-w-4xl text-2xl font-semibold leading-[1.2] tracking-tight text-white sm:text-3xl lg:text-4xl">
+              <span className="bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent">
+                {siteConfig.headline}
+              </span>
+            </h1>
+          </div>
 
           <p className="max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
             {siteConfig.summary}
           </p>
+
+          <div className="flex flex-wrap gap-6 pt-1 text-sm text-zinc-300 sm:text-base">
+            {siteConfig.heroHighlights.map((item) => (
+              <span
+                key={item.text}
+                className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 shadow-inner backdrop-blur-sm"
+              >
+                <span aria-hidden>{item.emoji}</span>
+                <span className="font-medium">{item.text}</span>
+              </span>
+            ))}
+          </div>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <motion.a
@@ -41,13 +58,21 @@ export function HeroSection() {
               <span className="absolute inset-0 bg-white/20 opacity-0 transition group-hover:opacity-100" />
             </motion.a>
             <motion.a
-              href="#contact"
+              href={siteConfig.githubUrl}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-full border border-zinc-600 bg-zinc-900/50 px-8 py-3.5 text-sm font-semibold text-zinc-100 shadow-lg shadow-black/20 backdrop-blur-sm transition hover:border-cyan-500/50 hover:bg-zinc-800/80 hover:text-cyan-200"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Contact Me
+              GitHub
             </motion.a>
+            <a
+              href="#contact"
+              className="text-sm font-medium text-zinc-500 underline-offset-4 transition hover:text-cyan-400 hover:underline"
+            >
+              Contact
+            </a>
             <a
               href={siteConfig.linkedinUrl}
               target="_blank"
@@ -55,14 +80,6 @@ export function HeroSection() {
               className="text-sm font-medium text-zinc-500 underline-offset-4 transition hover:text-cyan-400 hover:underline"
             >
               LinkedIn
-            </a>
-            <a
-              href={siteConfig.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm font-medium text-zinc-500 underline-offset-4 transition hover:text-cyan-400 hover:underline"
-            >
-              GitHub
             </a>
           </div>
         </motion.div>
