@@ -1,6 +1,5 @@
 import type { ProjectShowcase } from "@/lib/portfolio-data";
 import {
-  ecommerceProject,
   freelancerProject,
   tasksProject,
 } from "@/lib/portfolio-data";
@@ -18,6 +17,34 @@ export type FeaturedProject = {
   gradient: ProjectGradient;
 };
 
+export type MainFeaturedProject = {
+  title: string;
+  description: string;
+  features: string[];
+  techStack: string[];
+  liveUrl: string;
+  repoUrl: string;
+};
+
+export const mainFeaturedProject: MainFeaturedProject = {
+  title: "MERN E-commerce Platform",
+  description:
+    "A full-stack production-style e-commerce application built using MERN stack with authentication, admin dashboard, cart, checkout, and order management system.",
+  features: [
+    "JWT Authentication (Login/Signup)",
+    "Role-based Access (Admin/User)",
+    "Product Management System",
+    "Cart & Checkout Flow",
+    "Order Management System",
+    "Admin Dashboard (CRUD operations)",
+    "REST API Integration",
+    "Fully Responsive UI",
+  ],
+  techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+  liveUrl: "https://ecommerece-mern-jiq2p8nuv-ihamidchs-projects.vercel.app/",
+  repoUrl: "https://github.com/ihamidch/Ecommerece",
+};
+
 /** Core three: Task Management, E-commerce, Job Portal (marketplace) */
 export const featuredProjects: FeaturedProject[] = [
   {
@@ -28,15 +55,6 @@ export const featuredProjects: FeaturedProject[] = [
       "End-to-end MERN app with JWT auth, workspaces, boards, and Kanban-style task movement. Built for teams that need clear ownership of work: lists roll up to boards, APIs stay scoped per deployment, and the React client talks only to its paired Express + MongoDB backend in production.",
     stack: ["React", "Node.js", "Express", "MongoDB", "JWT", "DnD"],
     gradient: "emerald",
-  },
-  {
-    showcase: ecommerceProject,
-    headline: "E-commerce App",
-    tagline: "Storefront through checkout with admin workflows",
-    narrative:
-      "Full shopping experience: product catalog, cart, and order flows backed by Express and MongoDB. Separated Vite client and API hosts so inventory and checkout logic stay isolated per environment—mirrors how real teams split services without cross-wiring secrets.",
-    stack: ["React", "Node.js", "Express", "MongoDB", "REST"],
-    gradient: "cyan",
   },
   {
     showcase: freelancerProject,
