@@ -1,11 +1,11 @@
 /** Public site metadata — safe for client components */
 export const siteConfig = {
-  name: "Hamid Rafique",
+  name: "HAMID RAFIQUE",
   greeting: "Hi, I'm Hamid Rafique 👋",
   headline:
-    "MERN Stack Developer | Building SaaS & Scalable Web Apps",
+    "MERN Stack Developer | SaaS & Full-Stack Web Apps",
   summary:
-    "I design and build production-ready full-stack applications using React, Node.js, and MongoDB.",
+    "I build scalable, production-ready web applications using React, Node.js, and MongoDB.",
   heroHighlights: [
     { emoji: "🚀", text: "3+ Deployed Projects" },
     { emoji: "💻", text: "Production-ready code" },

@@ -99,7 +99,7 @@ export function FeaturedProjectsSection() {
       <motion.div {...fadeUp}>
         <SectionHeading
           eyebrow="Featured SaaS Projects"
-          title="Flagship MERN Products"
+          title="Startup-style Product Showcase"
           description="Two product-grade case studies up front, followed by additional production builds."
         />
       </motion.div>
@@ -296,13 +296,13 @@ export function FeaturedProjectsSection() {
 
       <motion.div {...fadeUp}>
         <SectionHeading
-          eyebrow="Other Projects"
-          title="Production MERN builds"
-          description="Additional production projects with separate deployment boundaries and API integrations."
+          eyebrow="Supporting Project"
+          title="Full-stack Task Management App"
+          description="A clean supporting SaaS card that demonstrates collaboration workflows, responsive UX, and deployment-ready MERN architecture."
         />
       </motion.div>
 
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 lg:grid-cols-3">
         {featuredProjects.map((fp) => (
           <ProjectCard
             key={fp.showcase.id}

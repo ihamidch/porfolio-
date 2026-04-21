@@ -93,11 +93,11 @@ export const secondaryFeaturedProject: SecondaryFeaturedProject = {
 export const featuredProjects: FeaturedProject[] = [
   {
     showcase: tasksProject,
-    headline: "Task Management System",
-    tagline: "FlowBoard — boards, lists, and drag-and-drop tasks",
+    headline: "Full-stack Task Management App",
+    tagline: "Supporting project · FlowBoard collaboration workspace",
     narrative:
-      "End-to-end MERN app with JWT auth, workspaces, boards, and Kanban-style task movement. Built for teams that need clear ownership of work: lists roll up to boards, APIs stay scoped per deployment, and the React client talks only to its paired Express + MongoDB backend in production.",
-    stack: ["React", "Node.js", "Express", "MongoDB", "JWT", "DnD"],
+      "A supporting MERN build focused on team productivity: authenticated workspaces, boards, and drag-and-drop task flow with dedicated API deployment. Built to demonstrate clean product UX and real-world collaboration patterns.",
+    stack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
     gradient: "emerald",
   },
 ];
