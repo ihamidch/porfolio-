@@ -20,8 +20,12 @@ export type FeaturedProject = {
 export type MainFeaturedProject = {
   label: string;
   title: string;
+  subtitle: string;
   description: string;
-  features: string[];
+  overview: string;
+  problem: string;
+  solution: string;
+  keyFeatures: string[];
   techStack: string[];
   liveUrl: string;
   repoUrl: string;
@@ -30,9 +34,17 @@ export type MainFeaturedProject = {
 export const mainFeaturedProject: MainFeaturedProject = {
   label: "FEATURED PROJECT ⭐",
   title: "MERN E-commerce Platform",
+  subtitle:
+    "Full-Stack SaaS E-commerce System with Admin Dashboard and Order Management",
   description:
     "A production-level full-stack e-commerce platform built using MERN stack with authentication, admin dashboard, cart system, checkout flow, and order management system.",
-  features: [
+  overview:
+    "A production-oriented shopping platform where users can discover products, manage carts, checkout, and track orders while administrators manage inventory and order operations in a dedicated dashboard.",
+  problem:
+    "Many small businesses need a single system for customer shopping and admin operations, but most starter e-commerce demos do not include role-aware flows, reliable order handling, or scalable API boundaries.",
+  solution:
+    "Built a MERN full-stack architecture with a React frontend, Node.js + Express API layer, and MongoDB persistence, backed by JWT authentication and role-based authorization for secure buyer/admin experiences.",
+  keyFeatures: [
     "JWT Authentication (Login/Register)",
     "Role-based Access (Admin/User)",
     "Admin Dashboard (CRUD Products & Orders)",

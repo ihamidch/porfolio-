@@ -106,21 +106,62 @@ export function FeaturedProjectsSection() {
         transition={{ type: "spring", stiffness: 250, damping: 20 }}
         className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-cyan-400/35 bg-gradient-to-br from-cyan-600/15 via-blue-500/10 to-zinc-950/70 p-1 shadow-2xl shadow-cyan-500/20"
       >
-        <div className="grid gap-8 rounded-[1.35rem] border border-white/10 bg-zinc-950/90 p-6 sm:p-8 lg:grid-cols-[1.3fr_1fr]">
-          <div className="space-y-6">
+        <div className="grid gap-8 rounded-[1.35rem] border border-white/10 bg-zinc-950/90 p-6 sm:p-8 lg:grid-cols-[1.45fr_1fr]">
+          <div className="space-y-7">
             <div className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
               {mainFeaturedProject.label}
             </div>
-            <ul className="grid gap-3 text-sm leading-relaxed text-zinc-300 sm:grid-cols-2">
-              {mainFeaturedProject.features.map((feature) => (
-                <li
-                  key={feature}
-                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-2"
-                >
-                  {feature}
-                </li>
-              ))}
-            </ul>
+            <div className="space-y-3">
+              <h3 className="text-2xl font-semibold leading-tight text-white sm:text-3xl">
+                {mainFeaturedProject.title}
+              </h3>
+              <p className="text-sm font-medium text-cyan-200/90 sm:text-base">
+                {mainFeaturedProject.subtitle}
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300/90">
+                  Overview
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-300">
+                  {mainFeaturedProject.overview}
+                </p>
+              </div>
+              <div className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300/90">
+                  Problem
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-300">
+                  {mainFeaturedProject.problem}
+                </p>
+              </div>
+              <div className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300/90">
+                  Solution
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-300">
+                  {mainFeaturedProject.solution}
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300/90">
+                Key Features
+              </p>
+              <ul className="grid gap-3 text-sm leading-relaxed text-zinc-300 sm:grid-cols-2">
+                {mainFeaturedProject.keyFeatures.map((feature) => (
+                  <li
+                    key={feature}
+                    className="rounded-xl border border-white/10 bg-white/5 px-3 py-2"
+                  >
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="flex flex-col justify-between gap-6 rounded-2xl border border-white/10 bg-zinc-900/70 p-5">
@@ -157,13 +198,7 @@ export function FeaturedProjectsSection() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-zinc-500 px-5 py-2.5 text-sm font-semibold text-zinc-100 transition hover:border-cyan-400/70 hover:bg-white/5"
               >
-                GitHub
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-full border border-cyan-500/50 bg-cyan-500/10 px-5 py-2.5 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-500/20"
-              >
-                Contact Me
+                GitHub Repository
               </a>
             </div>
           </div>
