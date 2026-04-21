@@ -21,10 +21,10 @@ export function HeroSection() {
           </div>
 
           <div className="space-y-4">
-            <p className="text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
-              {siteConfig.greeting}
+            <p className="text-xl font-semibold tracking-tight text-zinc-100 sm:text-2xl">
+              {siteConfig.name}
             </p>
-            <h1 className="max-w-4xl text-2xl font-semibold leading-[1.2] tracking-tight text-white sm:text-3xl lg:text-4xl">
+            <h1 className="max-w-4xl text-3xl font-semibold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-5xl">
               <span className="bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent">
                 {siteConfig.headline}
               </span>
@@ -58,20 +58,20 @@ export function HeroSection() {
               <span className="absolute inset-0 bg-white/20 opacity-0 transition group-hover:opacity-100" />
             </motion.a>
             <motion.a
-              href={siteConfig.githubUrl}
-              target="_blank"
-              rel="noreferrer"
+              href="#contact"
               className="rounded-full border border-zinc-600 bg-zinc-900/50 px-8 py-3.5 text-sm font-semibold text-zinc-100 shadow-lg shadow-black/20 backdrop-blur-sm transition hover:border-cyan-500/50 hover:bg-zinc-800/80 hover:text-cyan-200"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              GitHub
+              Contact Me
             </motion.a>
             <a
-              href="#contact"
+              href={siteConfig.githubUrl}
+              target="_blank"
+              rel="noreferrer"
               className="text-sm font-medium text-zinc-500 underline-offset-4 transition hover:text-cyan-400 hover:underline"
             >
-              Contact
+              GitHub
             </a>
             <a
               href={siteConfig.linkedinUrl}

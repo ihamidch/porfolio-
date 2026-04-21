@@ -1,7 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { featuredProjects, mainFeaturedProject } from "@/lib/featured-projects";
+import {
+  featuredProjects,
+  mainFeaturedProject,
+  secondaryFeaturedProject,
+} from "@/lib/featured-projects";
 import { deployHostname, projectGradientClass } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fadeUp } from "@/components/motion-presets";
@@ -94,9 +98,9 @@ export function FeaturedProjectsSection() {
     >
       <motion.div {...fadeUp}>
         <SectionHeading
-          eyebrow="Featured project"
-          title={mainFeaturedProject.title}
-          description={mainFeaturedProject.description}
+          eyebrow="Featured SaaS Projects"
+          title="Flagship MERN Products"
+          description="Two product-grade case studies up front, followed by additional production builds."
         />
       </motion.div>
 
@@ -205,9 +209,94 @@ export function FeaturedProjectsSection() {
         </div>
       </motion.article>
 
+      <motion.article
+        {...fadeUp}
+        whileHover={{ scale: 1.008, y: -6 }}
+        transition={{ type: "spring", stiffness: 240, damping: 24 }}
+        className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-indigo-400/25 bg-gradient-to-br from-indigo-600/12 via-violet-500/10 to-zinc-950/70 p-1 shadow-xl shadow-indigo-500/15"
+      >
+        <div className="grid gap-6 rounded-[1.3rem] border border-white/10 bg-zinc-950/90 p-6 sm:p-7 lg:grid-cols-[1.3fr_1fr]">
+          <div className="space-y-4">
+            <div className="inline-flex items-center rounded-full border border-indigo-300/30 bg-indigo-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-200">
+              {secondaryFeaturedProject.label}
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-white">
+                {secondaryFeaturedProject.title}
+              </h3>
+              <p className="mt-2 text-sm font-medium text-indigo-100/90">
+                {secondaryFeaturedProject.subtitle}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-300">
+                {secondaryFeaturedProject.description}
+              </p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-indigo-200/90">
+                Key Features
+              </p>
+              <ul className="grid gap-2 text-sm text-zinc-300 sm:grid-cols-2">
+                {secondaryFeaturedProject.keyFeatures.map((feature) => (
+                  <li
+                    key={feature}
+                    className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2"
+                  >
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-between gap-5 rounded-2xl border border-white/10 bg-zinc-900/70 p-5">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-indigo-200/90">
+                Tech Stack
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {secondaryFeaturedProject.techStack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-md border border-white/15 bg-white/5 px-2.5 py-1 text-xs font-medium text-zinc-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-4 space-y-1 font-mono text-xs text-zinc-500">
+                {deployHostname(secondaryFeaturedProject.liveUrl)}
+              </p>
+              {secondaryFeaturedProject.apiUrl ? (
+                <p className="mt-1 font-mono text-xs text-zinc-500">
+                  API · {deployHostname(secondaryFeaturedProject.apiUrl)}
+                </p>
+              ) : null}
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={secondaryFeaturedProject.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-indigo-400 to-violet-400 px-5 py-2.5 text-sm font-semibold text-zinc-950 shadow-lg shadow-indigo-500/25 transition hover:brightness-110"
+              >
+                Live Demo
+              </a>
+              <a
+                href={secondaryFeaturedProject.repoUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-zinc-500 px-5 py-2.5 text-sm font-semibold text-zinc-100 transition hover:border-indigo-400/70 hover:bg-white/5"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.article>
+
       <motion.div {...fadeUp}>
         <SectionHeading
-          eyebrow="More projects"
+          eyebrow="Other Projects"
           title="Production MERN builds"
           description="Additional production projects with separate deployment boundaries and API integrations."
         />

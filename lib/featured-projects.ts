@@ -31,6 +31,18 @@ export type MainFeaturedProject = {
   repoUrl: string;
 };
 
+export type SecondaryFeaturedProject = {
+  label: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  keyFeatures: string[];
+  techStack: string[];
+  liveUrl: string;
+  repoUrl: string;
+  apiUrl?: string;
+};
+
 export const mainFeaturedProject: MainFeaturedProject = {
   label: "FEATURED PROJECT ⭐",
   title: "MERN E-commerce Platform",
@@ -58,6 +70,25 @@ export const mainFeaturedProject: MainFeaturedProject = {
   repoUrl: "https://github.com/ihamidch/Ecommerece",
 };
 
+export const secondaryFeaturedProject: SecondaryFeaturedProject = {
+  label: "FEATURED SAAS PROJECT",
+  title: "Freelancer Marketplace SaaS Platform",
+  subtitle:
+    "Two-sided MERN marketplace for clients and freelancers with role-aware workflows",
+  description:
+    "A production-style SaaS marketplace where employers post jobs and freelancers apply with profile-based proposals. Includes role-based dashboard experiences and dedicated API boundaries for stable deployments.",
+  keyFeatures: [
+    "Job posting system",
+    "Freelancer applications",
+    "Admin dashboard",
+    "Role-based access",
+  ],
+  techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+  liveUrl: freelancerProject.liveUrl,
+  repoUrl: freelancerProject.repoUrl,
+  apiUrl: freelancerProject.apiUrl,
+};
+
 /** Core three: Task Management, E-commerce, Job Portal (marketplace) */
 export const featuredProjects: FeaturedProject[] = [
   {
@@ -68,14 +99,5 @@ export const featuredProjects: FeaturedProject[] = [
       "End-to-end MERN app with JWT auth, workspaces, boards, and Kanban-style task movement. Built for teams that need clear ownership of work: lists roll up to boards, APIs stay scoped per deployment, and the React client talks only to its paired Express + MongoDB backend in production.",
     stack: ["React", "Node.js", "Express", "MongoDB", "JWT", "DnD"],
     gradient: "emerald",
-  },
-  {
-    showcase: freelancerProject,
-    headline: "Job Portal",
-    tagline: "Freelancer marketplace — jobs, bids, and profiles",
-    narrative:
-      "Two-sided marketplace connecting employers and freelancers: job posts, applications, and role-aware views. Same MERN discipline as the other apps—its own API URL, its own database boundary, and React screens tuned for hiring-style workflows you can demo live.",
-    stack: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    gradient: "indigo",
   },
 ];
