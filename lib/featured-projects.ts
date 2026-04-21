@@ -18,6 +18,7 @@ export type FeaturedProject = {
 };
 
 export type MainFeaturedProject = {
+  label: string;
   title: string;
   description: string;
   features: string[];
@@ -27,17 +28,17 @@ export type MainFeaturedProject = {
 };
 
 export const mainFeaturedProject: MainFeaturedProject = {
+  label: "FEATURED PROJECT ⭐",
   title: "MERN E-commerce Platform",
   description:
-    "A full-stack production-style e-commerce application built using MERN stack with authentication, admin dashboard, cart, checkout, and order management system.",
+    "A production-level full-stack e-commerce platform built using MERN stack with authentication, admin dashboard, cart system, checkout flow, and order management system.",
   features: [
-    "JWT Authentication (Login/Signup)",
+    "JWT Authentication (Login/Register)",
     "Role-based Access (Admin/User)",
-    "Product Management System",
-    "Cart & Checkout Flow",
+    "Admin Dashboard (CRUD Products & Orders)",
+    "Cart & Checkout System",
     "Order Management System",
-    "Admin Dashboard (CRUD operations)",
-    "REST API Integration",
+    "REST API Architecture",
     "Fully Responsive UI",
   ],
   techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],

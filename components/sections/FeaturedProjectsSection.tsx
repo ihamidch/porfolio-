@@ -28,8 +28,8 @@ function ProjectCard({
   const grad = projectGradientClass(gradient);
   return (
     <motion.article
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-gradient-to-br bg-zinc-950/40 p-1 shadow-xl shadow-black/40 transition duration-300 ${grad}`}
-      whileHover={{ y: -6 }}
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-gradient-to-br bg-zinc-950/40 p-1 shadow-xl shadow-black/40 transition duration-300 hover:shadow-cyan-500/20 ${grad}`}
+      whileHover={{ y: -8, scale: 1.015 }}
       transition={{ type: "spring", stiffness: 300, damping: 24 }}
     >
       <div className="flex h-full flex-col rounded-[0.9rem] border border-white/5 bg-zinc-950/80 p-6 backdrop-blur-sm">
@@ -102,14 +102,14 @@ export function FeaturedProjectsSection() {
 
       <motion.article
         {...fadeUp}
-        whileHover={{ scale: 1.01, y: -6 }}
+        whileHover={{ scale: 1.012, y: -8 }}
         transition={{ type: "spring", stiffness: 250, damping: 20 }}
         className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-cyan-400/35 bg-gradient-to-br from-cyan-600/15 via-blue-500/10 to-zinc-950/70 p-1 shadow-2xl shadow-cyan-500/20"
       >
         <div className="grid gap-8 rounded-[1.35rem] border border-white/10 bg-zinc-950/90 p-6 sm:p-8 lg:grid-cols-[1.3fr_1fr]">
           <div className="space-y-6">
             <div className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
-              Main Featured Project
+              {mainFeaturedProject.label}
             </div>
             <ul className="grid gap-3 text-sm leading-relaxed text-zinc-300 sm:grid-cols-2">
               {mainFeaturedProject.features.map((feature) => (
@@ -158,6 +158,12 @@ export function FeaturedProjectsSection() {
                 className="inline-flex items-center justify-center rounded-full border border-zinc-500 px-5 py-2.5 text-sm font-semibold text-zinc-100 transition hover:border-cyan-400/70 hover:bg-white/5"
               >
                 GitHub
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full border border-cyan-500/50 bg-cyan-500/10 px-5 py-2.5 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-500/20"
+              >
+                Contact Me
               </a>
             </div>
           </div>
