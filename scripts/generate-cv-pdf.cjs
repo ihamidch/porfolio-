@@ -81,7 +81,7 @@ heading(doc, "Experience");
 
 body(doc);
 doc.font("Helvetica-Bold").text("INTRAGUARD — Software Developer");
-doc.font("Helvetica-Oblique").text("Remote, UK based    Sep 2025 — Present");
+doc.font("Helvetica-Oblique").text("Remote    Sep 2025 — Present");
 bullet(doc, "Developed and maintained full-stack MERN web applications with a focus on scalability.");
 bullet(doc, "Contributed to an industry-level website with GraphQL API integration.");
 doc.moveDown(0.35);

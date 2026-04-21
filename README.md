@@ -16,15 +16,13 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## CV (Download CV button)
+## Optional: generate a CV PDF locally
 
-The site serves **`public/Hamid-Rafique-CV.pdf`**. Regenerate it after editing content in **`scripts/generate-cv-pdf.cjs`**:
+If you edit **`scripts/generate-cv-pdf.cjs`** or the LaTeX source **`public/Hamid-Rafique-CV.tex`**, run:
 
 ```bash
 npm run cv:pdf
 ```
-
-Source LaTeX (for print-quality PDF via `pdflatex` on your machine): **`public/Hamid-Rafique-CV.tex`**.
 
 ## Live project URLs
 

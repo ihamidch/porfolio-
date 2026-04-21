@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hamid Rafique | Full-Stack Engineer & DevOps Specialist",
+  title: "Hamid Rafique | MERN Stack Developer · React · Node · MongoDB",
   description:
-    "Professional portfolio of Hamid Rafique showcasing MERN, Next.js, AWS, Terraform, Docker, and cloud-native delivery.",
+    "MERN stack developer portfolio — production React & Node apps, MongoDB, Express, GraphQL, DevOps on Vercel & AWS. ~1 year shipping full-stack products.",
 };
 
 export default function RootLayout({
