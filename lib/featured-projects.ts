@@ -43,6 +43,18 @@ export type SecondaryFeaturedProject = {
   apiUrl?: string;
 };
 
+export type SupportingFeaturedProject = {
+  label: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  keyFeatures: string[];
+  techStack: string[];
+  liveUrl: string;
+  repoUrl: string;
+  apiUrl?: string;
+};
+
 export const mainFeaturedProject: MainFeaturedProject = {
   label: "FEATURED PROJECT ⭐",
   title: "MERN E-commerce Platform",
@@ -89,14 +101,33 @@ export const secondaryFeaturedProject: SecondaryFeaturedProject = {
   apiUrl: freelancerProject.apiUrl,
 };
 
+export const supportingFeaturedProject: SupportingFeaturedProject = {
+  label: "FEATURED SAAS PROJECT",
+  title: "Full-stack Task Management App",
+  subtitle:
+    "FlowBoard SaaS workspace for boards, lists, task tracking, and team collaboration",
+  description:
+    "A production-ready task management platform where teams organize work into boards and lists, track progress with drag-and-drop updates, and collaborate through authenticated role-aware workflows.",
+  keyFeatures: [
+    "Board & list management",
+    "Drag-and-drop task flow",
+    "Workspace collaboration",
+    "Role-based access",
+  ],
+  techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+  liveUrl: tasksProject.liveUrl,
+  repoUrl: tasksProject.repoUrl,
+  apiUrl: tasksProject.apiUrl,
+};
+
 /** Core three: Task Management, E-commerce, Job Portal (marketplace) */
 export const featuredProjects: FeaturedProject[] = [
   {
     showcase: tasksProject,
     headline: "Full-stack Task Management App",
-    tagline: "Supporting project · FlowBoard collaboration workspace",
+    tagline: "FlowBoard collaboration workspace",
     narrative:
-      "A supporting MERN build focused on team productivity: authenticated workspaces, boards, and drag-and-drop task flow with dedicated API deployment. Built to demonstrate clean product UX and real-world collaboration patterns.",
+      "Production-grade task workflow app with authenticated workspaces and drag-and-drop board management, deployed with a dedicated API surface.",
     stack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
     gradient: "emerald",
   },
