@@ -165,7 +165,7 @@ export function FeaturedProjectsSection() {
         />
       </motion.div>
 
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-3">
         <motion.article
           {...fadeUp}
           whileHover={{ scale: 1.015, y: -8 }}
@@ -185,8 +185,7 @@ export function FeaturedProjectsSection() {
                   {mainFeaturedProject.subtitle}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-base">
-                  Full-stack e-commerce system with authentication, cart,
-                  checkout, and admin dashboard.
+                  {mainFeaturedProject.description}
                 </p>
               </div>
             </div>
@@ -196,18 +195,14 @@ export function FeaturedProjectsSection() {
                 Features
               </p>
               <ul className="grid gap-3 text-sm text-zinc-300 sm:grid-cols-2">
-                <li className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2">
-                  JWT Authentication & Role-based access
-                </li>
-                <li className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2">
-                  Cart & Order Management
-                </li>
-                <li className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2">
-                  Admin Dashboard (CRUD operations)
-                </li>
-                <li className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2">
-                  Responsive SaaS UI
-                </li>
+                {mainFeaturedProject.keyFeatures.map((feature) => (
+                  <li
+                    key={feature}
+                    className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2"
+                  >
+                    {feature}
+                  </li>
+                ))}
               </ul>
             </div>
 
