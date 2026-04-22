@@ -165,12 +165,12 @@ export function FeaturedProjectsSection() {
         />
       </motion.div>
 
-      <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-3">
+      <div className="mx-auto max-w-6xl space-y-8">
         <motion.article
           {...fadeUp}
-          whileHover={{ scale: 1.015, y: -8 }}
+          whileHover={{ scale: 1.012, y: -8 }}
           transition={{ type: "spring", stiffness: 230, damping: 22 }}
-          className="overflow-hidden rounded-3xl border border-cyan-400/35 bg-gradient-to-br from-cyan-600/15 via-blue-500/10 to-zinc-950/70 p-1 shadow-2xl shadow-cyan-500/20 lg:col-span-2"
+          className="overflow-hidden rounded-3xl border border-cyan-400/35 bg-gradient-to-br from-cyan-600/15 via-blue-500/10 to-zinc-950/70 p-1 shadow-2xl shadow-cyan-500/20"
         >
           <div className="grid gap-6 rounded-[1.3rem] border border-white/10 bg-zinc-950/90 p-6 sm:p-8">
             <div className="space-y-4">
@@ -247,7 +247,7 @@ export function FeaturedProjectsSection() {
           </div>
         </motion.article>
 
-        <div className="grid gap-6">
+        <div className="grid items-start gap-6 lg:grid-cols-2">
           <MediumFeaturedCard
             label={secondaryFeaturedProject.label}
             title={secondaryFeaturedProject.title}
