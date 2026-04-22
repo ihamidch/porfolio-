@@ -57,7 +57,7 @@ export type SupportingFeaturedProject = {
 
 export const mainFeaturedProject: MainFeaturedProject = {
   label: "FEATURED PROJECT ⭐",
-  title: "MERN E-commerce Platform",
+  title: "MERN E-commerce SaaS Platform ⭐",
   subtitle:
     "Full-Stack SaaS E-commerce System with Admin Dashboard and Order Management",
   description:
@@ -90,10 +90,10 @@ export const secondaryFeaturedProject: SecondaryFeaturedProject = {
   description:
     "A production-style SaaS marketplace where employers post jobs and freelancers apply with profile-based proposals. Includes role-based dashboard experiences and dedicated API boundaries for stable deployments.",
   keyFeatures: [
-    "Job posting system",
-    "Freelancer applications",
-    "Admin dashboard",
-    "Role-based access",
+    "Client & Freelancer roles",
+    "Job posting & applications",
+    "Dashboard UI",
+    "Workflow management",
   ],
   techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
   liveUrl: freelancerProject.liveUrl,
@@ -103,7 +103,7 @@ export const secondaryFeaturedProject: SecondaryFeaturedProject = {
 
 export const supportingFeaturedProject: SupportingFeaturedProject = {
   label: "FEATURED SAAS PROJECT",
-  title: "Full-stack Task Management App",
+  title: "Task Management System",
   subtitle:
     "FlowBoard SaaS workspace for boards, lists, task tracking, and team collaboration",
   description:

@@ -49,6 +49,14 @@ export function ContactSection() {
             >
               {siteConfig.phone}
             </a>
+            <a
+              href={siteConfig.portfolioUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="block text-sm text-zinc-400 hover:text-zinc-200"
+            >
+              {siteConfig.portfolioUrl}
+            </a>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
                 href={siteConfig.linkedinUrl}

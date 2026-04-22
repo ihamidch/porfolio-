@@ -16,8 +16,8 @@ export function SkillsSection() {
         <motion.div {...fadeUp}>
           <SectionHeading
             eyebrow="Capabilities"
-            title="Skills"
-            description="Organized how hiring teams scan resumes: frontend, backend, data, and delivery tooling."
+            title="Tech Stack"
+            description="Cleanly grouped technologies recruiters expect from a production-ready MERN developer."
           />
         </motion.div>
 

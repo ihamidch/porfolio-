@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { FeaturedProjectsSection } from "@/components/sections/FeaturedProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
@@ -29,6 +30,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <AboutSection />
         <FeaturedProjectsSection />
         <SkillsSection />
         <ExperienceSection />

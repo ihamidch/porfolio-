@@ -10,30 +10,39 @@ export function HeroSection() {
       id="top"
       className="relative overflow-hidden border-b border-white/5 px-4 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-20 lg:px-12"
     >
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_45%),radial-gradient(circle_at_80%_25%,rgba(99,102,241,0.2),transparent_40%),radial-gradient(circle_at_50%_90%,rgba(20,184,166,0.14),transparent_35%)]" />
       <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 top-40 h-80 w-80 rounded-full bg-indigo-600/25 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-64 w-[min(100%,48rem)] -translate-x-1/2 rounded-full bg-gradient-to-t from-cyan-500/10 to-transparent blur-2xl" />
 
       <div className="relative mx-auto max-w-6xl">
-        <motion.div {...fadeUp} className="space-y-8">
+        <motion.div
+          {...fadeUp}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
+          className="space-y-8"
+        >
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/25 bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-cyan-300/95 shadow-lg shadow-cyan-500/5">
             Open to opportunities · {siteConfig.location}
           </div>
 
-          <div className="space-y-4">
-            <p className="text-xl font-semibold tracking-tight text-zinc-100 sm:text-2xl">
+          <div className="space-y-5">
+            <p className="text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl lg:text-5xl">
               {siteConfig.name}
             </p>
-            <h1 className="max-w-4xl text-3xl font-semibold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h1 className="max-w-4xl text-2xl font-semibold leading-[1.15] tracking-tight text-white sm:text-3xl lg:text-4xl">
               <span className="bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent">
                 {siteConfig.headline}
               </span>
             </h1>
+            <p className="max-w-3xl text-lg leading-relaxed text-zinc-200 sm:text-xl">
+              {siteConfig.summary}
+            </p>
+            <p className="max-w-3xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+              {siteConfig.heroDescription}
+            </p>
           </div>
-
-          <p className="max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
-            {siteConfig.summary}
-          </p>
 
           <div className="flex flex-wrap gap-6 pt-1 text-sm text-zinc-300 sm:text-base">
             {siteConfig.heroHighlights.map((item) => (
@@ -65,22 +74,6 @@ export function HeroSection() {
             >
               Contact Me
             </motion.a>
-            <a
-              href={siteConfig.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm font-medium text-zinc-500 underline-offset-4 transition hover:text-cyan-400 hover:underline"
-            >
-              GitHub
-            </a>
-            <a
-              href={siteConfig.linkedinUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm font-medium text-zinc-500 underline-offset-4 transition hover:text-cyan-400 hover:underline"
-            >
-              LinkedIn
-            </a>
           </div>
         </motion.div>
       </div>
