@@ -59,26 +59,39 @@ export const mainFeaturedProject: MainFeaturedProject = {
   label: "FEATURED PROJECT ⭐",
   title: "MERN E-commerce SaaS Platform ⭐",
   subtitle:
-    "Full-Stack SaaS E-commerce System with Admin Dashboard and Order Management",
+    "Production-ready full-stack ecommerce with secure auth, admin controls, and optimized UX",
   description:
-    "A production-level full-stack e-commerce platform built using MERN stack with authentication, admin dashboard, cart system, checkout flow, and order management system.",
+    "Built a full-stack MERN ecommerce application with secure JWT authentication, role-based access control, complete shopping workflows, and production deployment on Vercel.",
   overview:
-    "A production-oriented shopping platform where users can discover products, manage carts, checkout, and track orders while administrators manage inventory and order operations in a dedicated dashboard.",
+    "A production-ready ecommerce platform where users browse products, manage carts, complete checkout, and track orders while admins control products, users, and order operations from a dedicated dashboard.",
   problem:
-    "Many small businesses need a single system for customer shopping and admin operations, but most starter e-commerce demos do not include role-aware flows, reliable order handling, or scalable API boundaries.",
+    "Most ecommerce demos skip production concerns like secure authentication, role-aware authorization, backend cart synchronization, API hardening, and reliable admin operations.",
   solution:
-    "Built a MERN full-stack architecture with a React frontend, Node.js + Express API layer, and MongoDB persistence, backed by JWT authentication and role-based authorization for secure buyer/admin experiences.",
+    "Implemented a hardened MERN architecture with protected routes, auth validation, rate limiting, secure headers, backend cart sync, CI checks, and environment-based frontend/backend deployment on Vercel.",
   keyFeatures: [
-    "JWT Authentication (Login/Register)",
-    "Role-based Access (Admin/User)",
-    "Admin Dashboard (CRUD Products & Orders)",
-    "Cart & Checkout System",
-    "Order Management System",
-    "REST API Architecture",
-    "Fully Responsive UI",
+    "JWT authentication, role-based access, and protected routes",
+    "Complete ecommerce flow: listing, details, cart, checkout, and order history",
+    "Admin dashboard: product CRUD, order status, user role management",
+    "Cloudinary-ready image upload support",
+    "Security hardening: Helmet, Zod auth validation, and rate limiting",
+    "Backend cart sync, loaders/skeletons, and responsive Tailwind UI",
+    "CI pipeline with GitHub Actions for lint/build and backend boot checks",
   ],
-  techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
-  liveUrl: "https://ecommerece-mern-jiq2p8nuv-ihamidchs-projects.vercel.app/",
+  techStack: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Mongoose",
+    "JWT",
+    "Axios",
+    "Cloudinary",
+    "Vercel",
+    "GitHub Actions",
+  ],
+  liveUrl: "https://ecommerece-mern-web.vercel.app",
   repoUrl: "https://github.com/ihamidch/Ecommerece",
 };
 
