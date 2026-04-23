@@ -9,7 +9,7 @@ const env = (key: string, fallback: string) => {
 };
 
 export type ProjectShowcase = {
-  id: "ecommerce" | "freelancer" | "tasks" | "talentscout";
+  id: "ecommerce" | "freelancer" | "tasks";
   title: string;
   label: string;
   summary: string;
@@ -72,29 +72,11 @@ export const tasksProject: ProjectShowcase = {
   ),
 };
 
-/** TalentScout AI — Vercel projects talentscout-ai-web + talentscout-ai-api */
-export const talentscoutProject: ProjectShowcase = {
-  id: "talentscout",
-  title: "TalentScout AI",
-  label: "MERN · TalentScout (own Vercel projects)",
-  summary:
-    "Resume screening, recruiter dashboard, RAG-style analysis—Express API separate from other apps; optional Python AI via AI_ENGINE_URL.",
-  liveUrl: env(
-    "NEXT_PUBLIC_LIVE_TALENTSCOUT",
-    "https://talentscout-ai-web.vercel.app",
-  ),
-  repoUrl: "https://github.com/ihamidch/talentscout-ai",
-  apiUrl: env(
-    "NEXT_PUBLIC_LIVE_TALENTSCOUT_API",
-    "https://talentscout-ai-api.vercel.app",
-  ),
-};
-
 /** Three MERN production apps highlighted on the site (each repo = its own Vercel URLs). */
 export const mernStackProjects: ProjectShowcase[] = [
   ecommerceProject,
   freelancerProject,
-  talentscoutProject,
+  tasksProject,
 ];
 
 export const mernProjectsOther: ProjectShowcase[] = [];
@@ -144,18 +126,6 @@ export const devOpsShowcases: DevOpsShowcase[] = [
       "https://server-xi-khaki-22.vercel.app",
     ),
     repoUrl: "https://github.com/ihamidch/Full-stack-task-management",
-  },
-  {
-    id: "api-talentscout",
-    title: "TalentScout AI — production API",
-    label: "Vercel · Express · MongoDB",
-    summary:
-      "TalentScout backend only (talentscout-ai-api). Deployed from the talentscout-ai repo server/ root.",
-    liveUrl: env(
-      "NEXT_PUBLIC_LIVE_TALENTSCOUT_API",
-      "https://talentscout-ai-api.vercel.app",
-    ),
-    repoUrl: "https://github.com/ihamidch/talentscout-ai",
   },
   {
     id: "portfolio-site",
