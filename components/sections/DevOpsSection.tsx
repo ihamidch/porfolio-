@@ -36,6 +36,21 @@ export function DevOpsSection() {
         ))}
       </div>
 
+      <motion.article
+        {...fadeUp}
+        className="mx-auto max-w-6xl rounded-2xl border border-white/10 bg-zinc-950/60 p-7 shadow-xl shadow-black/25"
+      >
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300/90">
+          System Architecture
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-base">
+          Deployed with CI/CD through GitHub Actions, container-friendly service
+          boundaries, and environment-separated frontend/API projects on
+          Vercel. Production routing includes managed SSL, CORS hardening, and
+          stable release flow from Git to live deployment.
+        </p>
+      </motion.article>
+
       <div className="mx-auto max-w-6xl space-y-6">
         <h3 className="text-lg font-semibold text-zinc-200">Live deployments</h3>
         <div className="grid gap-4 md:grid-cols-2">

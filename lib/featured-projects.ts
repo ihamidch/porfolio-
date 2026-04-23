@@ -25,6 +25,7 @@ export type MainFeaturedProject = {
   overview: string;
   problem: string;
   solution: string;
+  impact: string;
   keyFeatures: string[];
   techStack: string[];
   liveUrl: string;
@@ -68,6 +69,8 @@ export const mainFeaturedProject: MainFeaturedProject = {
     "Most ecommerce demos skip production concerns like secure authentication, role-aware authorization, backend cart synchronization, API hardening, and reliable admin operations.",
   solution:
     "Implemented a hardened MERN architecture with protected routes, auth validation, rate limiting, secure headers, backend cart sync, CI checks, and environment-based frontend/backend deployment on Vercel.",
+  impact:
+    "Improved release confidence with CI checks, reduced auth attack surface through rate limiting and validation, and kept deployments stable using environment-specific frontend/backend routing.",
   keyFeatures: [
     "JWT authentication, role-based access, and protected routes",
     "Complete ecommerce flow: listing, details, cart, checkout, and order history",

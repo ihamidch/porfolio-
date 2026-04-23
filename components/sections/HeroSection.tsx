@@ -74,6 +74,15 @@ export function HeroSection() {
             >
               Contact Me
             </motion.a>
+            <motion.a
+              href="/Hamids_cv.pdf"
+              download
+              className="rounded-full border border-cyan-500/40 bg-cyan-500/10 px-8 py-3.5 text-sm font-semibold text-cyan-200 shadow-lg shadow-cyan-500/10 transition hover:bg-cyan-500/20 hover:text-cyan-100"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Download CV
+            </motion.a>
           </div>
         </motion.div>
       </div>

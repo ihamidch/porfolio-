@@ -206,6 +206,15 @@ export function FeaturedProjectsSection() {
               </ul>
             </div>
 
+            <div className="rounded-2xl border border-cyan-300/20 bg-cyan-400/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200/90">
+                Impact / Metric
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-300">
+                {mainFeaturedProject.impact}
+              </p>
+            </div>
+
             <div className="flex flex-col gap-5 rounded-2xl border border-white/10 bg-zinc-900/70 p-5 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200/90">

@@ -16,8 +16,8 @@ export const professionalExperience: JobEntry[] = [
     period: "Sep 2025 – Present",
     location: "Remote",
     highlights: [
-      "Build and maintain MERN applications with emphasis on scalability and maintainable API design.",
-      "Integrate GraphQL in production features alongside REST services and collaborate on release-ready code.",
+      "Architect and maintain MERN applications with scalable service boundaries and maintainable API contracts.",
+      "Integrated GraphQL-driven features alongside REST services and shipped release-ready production modules.",
     ],
   },
   {
@@ -27,8 +27,8 @@ export const professionalExperience: JobEntry[] = [
     period: "2025",
     location: "Lahore, Pakistan",
     highlights: [
-      "Automated AWS infrastructure with Terraform and hardened Docker-based deployments.",
-      "Supported Node.js and Python services with repeatable CI-style delivery patterns.",
+      "Automated AWS infrastructure provisioning with Terraform and hardened Docker-based deployment workflows.",
+      "Standardized CI-style delivery patterns for Node.js and Python services to improve release reliability.",
     ],
   },
   {
@@ -38,8 +38,8 @@ export const professionalExperience: JobEntry[] = [
     period: "2024 – 2025",
     location: "Lahore, Pakistan",
     highlights: [
-      "Delivered responsive React interfaces wired to Node.js backends and MongoDB-backed APIs.",
-      "Improved data loading and state handling using Context/Redux patterns in client code.",
+      "Engineered responsive React interfaces integrated with Node.js backends and MongoDB-backed APIs.",
+      "Optimized client-side performance with improved data-loading strategy and robust Context/Redux state patterns.",
     ],
   },
 ];
@@ -52,9 +52,9 @@ export const selfProjectExperience: JobEntry = {
   period: "2024 – Present",
   location: "Remote",
   highlights: [
-    "Owned three separate MERN codebases (e-commerce, job marketplace, task management), each with its own Express API and MongoDB layer deployed apart from the others.",
-    "Implemented JWT auth, role-aware flows, dashboards, and REST integrations; verified end-to-end behavior against live staging-style URLs.",
-    "Published client and API to Vercel with environment-driven configuration (e.g. VITE_API_URL) so frontends only talk to their matching backend.",
-    "Iterated on UI/UX in React, API contracts in Express, and schema design in MongoDB—same discipline as shipping in a product team, applied to portfolio-grade demos.",
+    "Owned three independent MERN products (e-commerce, marketplace, task management), each with isolated Express APIs and MongoDB persistence layers.",
+    "Implemented JWT auth, role-based access, dashboard workflows, and REST integrations with production-style end-to-end verification.",
+    "Deployed frontend and API services with environment-specific routing so each client communicates only with its matching backend.",
+    "Iterated on React UX, Express API contracts, and MongoDB schema evolution using the same standards expected in product engineering teams.",
   ],
 };

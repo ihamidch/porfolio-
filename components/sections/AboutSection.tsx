@@ -85,6 +85,32 @@ export function AboutSection() {
             ))}
           </div>
         </motion.div>
+
+        <motion.article
+          {...fadeUp}
+          className="rounded-2xl border border-white/10 bg-zinc-950/55 p-6 shadow-lg shadow-black/20"
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300/90">
+            Technical Focus
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-base">
+            I prioritize clean, type-safe, and maintainable code with
+            production-ready API boundaries. My delivery standard emphasizes
+            secure auth flows, predictable deployments, and architecture that a
+            team can scale without rewrites.
+          </p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-zinc-200">
+              Security-first authentication and validation
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-zinc-200">
+              CI-driven quality checks before release
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-zinc-200">
+              Scalable full-stack architecture decisions
+            </div>
+          </div>
+        </motion.article>
       </div>
     </section>
   );
