@@ -9,6 +9,7 @@ import {
 import { deployHostname } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { fadeUp } from "@/components/motion-presets";
+import { EcommerceCaseStudyBlock } from "@/components/sections/EcommerceCaseStudyBlock";
 
 type MediumFeaturedCardProps = {
   label: string;
@@ -166,95 +167,7 @@ export function FeaturedProjectsSection() {
       </motion.div>
 
       <div className="mx-auto max-w-6xl space-y-8">
-        <motion.article
-          {...fadeUp}
-          whileHover={{ scale: 1.012, y: -8 }}
-          transition={{ type: "spring", stiffness: 230, damping: 22 }}
-          className="overflow-hidden rounded-3xl border border-cyan-400/35 bg-gradient-to-br from-cyan-600/15 via-blue-500/10 to-zinc-950/70 p-1 shadow-2xl shadow-cyan-500/20"
-        >
-          <div className="grid gap-6 rounded-[1.3rem] border border-white/10 bg-zinc-950/90 p-6 sm:p-8">
-            <div className="space-y-4">
-              <div className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">
-                FEATURED PROJECT ⭐
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-white sm:text-3xl">
-                  MERN E-commerce SaaS Platform ⭐
-                </h3>
-                <p className="mt-2 text-sm font-medium text-cyan-100/90 sm:text-base">
-                  {mainFeaturedProject.subtitle}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-base">
-                  {mainFeaturedProject.description}
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200/90">
-                Features
-              </p>
-              <ul className="grid gap-3 text-sm text-zinc-300 sm:grid-cols-2">
-                {mainFeaturedProject.keyFeatures.map((feature) => (
-                  <li
-                    key={feature}
-                    className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2"
-                  >
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="rounded-2xl border border-cyan-300/20 bg-cyan-400/5 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200/90">
-                Impact / Metric
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-300">
-                {mainFeaturedProject.impact}
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-5 rounded-2xl border border-white/10 bg-zinc-900/70 p-5 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200/90">
-                  Tech Stack
-                </p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {mainFeaturedProject.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-md border border-white/15 bg-white/5 px-2.5 py-1 text-xs font-medium text-zinc-200"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <p className="mt-4 font-mono text-xs text-zinc-500">
-                  App · {deployHostname(mainFeaturedProject.liveUrl)}
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href={mainFeaturedProject.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-teal-400 px-5 py-2.5 text-sm font-semibold text-zinc-950 shadow-lg shadow-cyan-500/25 transition hover:brightness-110"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href={mainFeaturedProject.repoUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border border-zinc-500 px-5 py-2.5 text-sm font-semibold text-zinc-100 transition hover:border-cyan-400/70 hover:bg-white/5"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-        </motion.article>
+        <EcommerceCaseStudyBlock project={mainFeaturedProject} />
 
         <div className="grid items-start gap-6 lg:grid-cols-2">
           <MediumFeaturedCard

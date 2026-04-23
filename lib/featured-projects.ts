@@ -17,6 +17,26 @@ export type FeaturedProject = {
   gradient: ProjectGradient;
 };
 
+export type CaseStudyFeatureCard = {
+  title: string;
+  icon: "shield" | "layout" | "cart" | "api" | "media" | "spark";
+};
+
+export type CaseStudyTechGroup = {
+  label: string;
+  items: string[];
+};
+
+export type CaseStudyChallenge = {
+  challenge: string;
+  solution: string;
+};
+
+export type CaseStudyShowcasePanel = {
+  id: string;
+  label: string;
+};
+
 export type MainFeaturedProject = {
   label: string;
   title: string;
@@ -26,6 +46,18 @@ export type MainFeaturedProject = {
   problem: string;
   solution: string;
   impact: string;
+  /** One-line hook for case-study header */
+  caseStudyTagline: string;
+  /** Short recruiter scan: problem statement */
+  caseStudyProblemLead: string;
+  /** Short recruiter scan: solution statement */
+  caseStudySolutionLead: string;
+  showcasePanels: CaseStudyShowcasePanel[];
+  caseStudyFeatures: CaseStudyFeatureCard[];
+  techStackGroups: CaseStudyTechGroup[];
+  contribution: string[];
+  engineeringHighlights: string[];
+  challenges: CaseStudyChallenge[];
   keyFeatures: string[];
   techStack: string[];
   liveUrl: string;
@@ -58,7 +90,7 @@ export type SupportingFeaturedProject = {
 
 export const mainFeaturedProject: MainFeaturedProject = {
   label: "FEATURED PROJECT ⭐",
-  title: "MERN E-commerce SaaS Platform ⭐",
+  title: "MERN E-commerce SaaS Platform",
   subtitle:
     "Production-ready full-stack ecommerce with secure auth, admin controls, and optimized UX",
   description:
@@ -71,6 +103,60 @@ export const mainFeaturedProject: MainFeaturedProject = {
     "Implemented a hardened MERN architecture with protected routes, auth validation, rate limiting, secure headers, backend cart sync, CI checks, and environment-based frontend/backend deployment on Vercel.",
   impact:
     "Improved release confidence with CI checks, reduced auth attack surface through rate limiting and validation, and kept deployments stable using environment-specific frontend/backend routing.",
+  caseStudyTagline:
+    "Scalable full-stack e-commerce platform with authentication, admin dashboard, and checkout system",
+  caseStudyProblemLead:
+    "Users need a secure, scalable way to browse products, manage carts, and complete purchases online—without fragile demos or missing admin workflows.",
+  caseStudySolutionLead:
+    "Delivered a production-style MERN stack with JWT auth, role-based access, REST APIs, cart and checkout flows, and an admin dashboard for catalog and order operations.",
+  showcasePanels: [
+    { id: "home", label: "Homepage" },
+    { id: "product", label: "Product page" },
+    { id: "cart", label: "Cart" },
+    { id: "checkout", label: "Checkout" },
+    { id: "admin", label: "Admin dashboard" },
+  ],
+  caseStudyFeatures: [
+    { title: "JWT authentication & role-based access", icon: "shield" },
+    { title: "Admin dashboard (products & orders)", icon: "layout" },
+    { title: "Cart & checkout flow", icon: "cart" },
+    { title: "Hardened REST API layer", icon: "api" },
+    { title: "Cloudinary-ready product media", icon: "media" },
+    { title: "Responsive UI, loaders & skeletons", icon: "spark" },
+  ],
+  techStackGroups: [
+    { label: "Frontend", items: ["React", "Vite", "Tailwind CSS", "Axios"] },
+    { label: "Backend", items: ["Node.js", "Express"] },
+    { label: "Database", items: ["MongoDB", "Mongoose"] },
+    {
+      label: "Other tools",
+      items: ["JWT", "Zod", "Helmet", "Cloudinary", "GitHub Actions", "Vercel"],
+    },
+  ],
+  contribution: [
+    "Designed full-stack architecture with separated client and API deployments",
+    "Built REST APIs with modular Express structure and clear route boundaries",
+    "Implemented JWT authentication, protected routes, and role-aware UI flows",
+    "Shipped cart, checkout, and order history with backend cart synchronization",
+    "Developed responsive Tailwind UI with loading states and polished UX",
+  ],
+  engineeringHighlights: [
+    "Tightened API reliability with validation, rate limiting, and security headers",
+    "Structured backend modules for easier scaling and feature iteration",
+    "Built reusable UI patterns for catalog, cart, and admin surfaces",
+  ],
+  challenges: [
+    {
+      challenge: "Keeping cart state consistent across sessions and devices",
+      solution:
+        "Implemented backend cart sync for authenticated users with resilient client state handling.",
+    },
+    {
+      challenge: "Securing authentication flows against abuse",
+      solution:
+        "Combined JWT sessions, protected routes, Zod validation, and login/signup rate limiting.",
+    },
+  ],
   keyFeatures: [
     "JWT authentication, role-based access, and protected routes",
     "Complete ecommerce flow: listing, details, cart, checkout, and order history",
