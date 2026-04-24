@@ -28,6 +28,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "Express.js", icon: "server" },
       { name: "REST & GraphQL APIs", icon: "api" },
       { name: "JWT Auth", icon: "lock" },
+      { name: "Python", icon: "code" },
+      { name: "FastAPI", icon: "api" },
     ],
   },
   {
@@ -48,6 +50,11 @@ export const skillCategories: SkillCategory[] = [
       { name: "Vercel", icon: "cloud" },
       { name: "AWS & Terraform", icon: "aws" },
       { name: "VS Code / Postman", icon: "tool" },
+      { name: "LLMs", icon: "cloud" },
+      { name: "LangChain", icon: "tool" },
+      { name: "RAG Pipelines", icon: "schema" },
+      { name: "Vector DB (FAISS / Pinecone)", icon: "db" },
+      { name: "Hugging Face", icon: "cloud" },
     ],
   },
 ];

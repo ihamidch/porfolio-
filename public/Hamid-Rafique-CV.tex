@@ -1,140 +1,97 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.55in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{array}
-\usepackage{multicol}
 
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    urlcolor=blue,
+    urlcolor=blue
 }
 
 \titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{5pt}
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+\setlist[itemize]{noitemsep, topsep=1pt, leftmargin=0.17in}
 
 \begin{document}
 
 \begin{center}
-    {\Huge \textbf{HAMID RAFIQUE}} \\
+    {\Huge \textbf{HAMID RAFIQUE}}\\
     \vspace{4pt}
-    Lahore, Pakistan | +92 324-6763616 \\
-    \href{mailto:hamidch0866@gmail.com}{hamidch0866@gmail.com} | \href{https://github.com/ihamidch}{GitHub} | \href{https://linkedin.com/in/hamid-rafique-a75b9a3a5}{LinkedIn}
+    Lahore, Pakistan \;|\; +92 324-6763616 \;|\;
+    \href{mailto:hamidch0866@gmail.com}{hamidch0866@gmail.com}\\
+    \href{https://github.com/ihamidch}{GitHub: ihamidch} \;|\;
+    \href{https://linkedin.com/in/hamid-rafique-a75b9a3a5}{LinkedIn} \;|\;
+    \textbf{\href{https://porfolio-ihamidchs-projects.vercel.app}{Portfolio: porfolio-ihamidchs-projects.vercel.app}}
 \end{center}
 
-\section{Education}
-\textbf{University of Sahiwal (UoS)} \hfill Sahiwal, Pakistan \\
-\textbf{Bachelor of Science in Computer Science} \hfill 2021 -- 2025 \\
-Cumulative GPA: 3.47 / 4.0
+\vspace{2pt}
+\noindent
+\textbf{MERN Stack Developer \& AI Engineer} specializing in scalable full-stack SaaS systems, LLM integrations, and production-ready deployments. Expert in Next.js 15, Node.js, MongoDB, Python/FastAPI, and RAG architecture, with hands-on delivery in Dockerized and Terraform-driven environments.
+
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Full-Stack:} MERN Stack (MongoDB, Express, React, Node.js), Next.js 15, TypeScript, Prisma, Redux.
+    \item \textbf{DevOps \& Cloud:} Docker, Terraform, AWS (EC2, S3), CI/CD (GitHub Actions), Nginx, Linux, Vercel.
+    \item \textbf{AI Engineering:} LLM Integration (Llama 3.3), LangChain, Hybrid Search RAG, Vector Databases (FAISS), Hugging Face Embeddings.
+    \item \textbf{Backend \& Security:} REST/GraphQL APIs, JWT Auth, RBAC, Zod Validation, API Rate Limiting.
+\end{itemize}
 
 \section{Experience}
 
-\textbf{INTRAGUARD} \hfill Remote \\
-\textit{Software Developer} \hfill Sep 2025 -- Present \\
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item Developed and maintained full-stack MERN web applications with a focus on scalability.
-    \item Contributed to an industry-level website, focusing on GraphQL API integration.
-\end{itemize}
-
-\vspace{6pt}
-
 \textbf{METALOGICS} \hfill Lahore, Pakistan \\
-\textit{React.js Developer (MERN Stack)} \hfill 2024 -- 2025 \\
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item Developed responsive user interfaces using React.js and integrated them with Node.js backends.
-    \item Managed state using Redux/Context API and optimized MongoDB queries for performance.
+\textit{React.js Developer (MERN Stack)} \hfill 2024 -- 2025
+\begin{itemize}
+    \item Designed high-performance React interfaces and optimized MongoDB query patterns to reduce latency.
+    \item Implemented reusable UI components with state management (Redux) for maintainable architecture.
 \end{itemize}
-
-\vspace{6pt}
-
-\textbf{FLUXXION} \hfill Remote, Pakistan \\
-\textit{Data Analysis Intern} \hfill May 2025 -- Jul 2025 \\
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item Conducted data cleaning, transformation, and visualization using Power BI and Python.
-    \item Developed SQL queries for extracting key business metrics and patterns.
-\end{itemize}
-
-\vspace{6pt}
 
 \textbf{CYBERWINGS.PK} \hfill Lahore, Pakistan \\
-\textit{DevOps Engineer Associate} \hfill 2025 \\
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item Automated infrastructure for Python and Node.js applications using Terraform and AWS.
-    \item Containerized complex AI workflows using Docker for high availability.
+\textit{DevOps Engineer Associate} \hfill 2025
+\begin{itemize}
+    \item Automated deployment workflows for Node.js and AI services using Docker, Terraform, and AWS.
+    \item Supported production readiness by improving environment configuration and deployment consistency.
 \end{itemize}
 
-\section{Technical Skills}
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item \textbf{Programming Languages:} Python, JavaScript, C++, SQL (MS-SQL, MySQL), HTML5, CSS, LaTeX
-    \item \textbf{Frameworks \& Libraries:} MERN stack, Next.js, FastAPI, LangChain, TailwindCSS, GraphQL
-    \item \textbf{Tools \& Platforms:} Git, GitHub, Docker, AWS, Terraform, VS Code, Postman, Power BI
+\section{Featured Projects}
+
+\textbf{\href{https://ecommerece-mern-web.vercel.app}{MERN E-commerce SaaS Platform}} \hfill 2026 \\
+\begin{itemize}
+    \item Built a full-stack e-commerce system featuring JWT-based RBAC and secure checkout workflows.
+    \item Integrated automated CI/CD pipelines via GitHub Actions, optimizing deployment cycles.
 \end{itemize}
 
-\section{Selected projects (aligned with portfolio)}
-
-\textbf{Production MERN — live on Vercel (each app: own frontend + API; showcased on personal portfolio)} \hfill 2024 -- 2025
-
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item \textbf{\href{https://ecommerece-mern-web.vercel.app/}{E-commerce Platform}} — MERN, Express, MongoDB. \href{https://github.com/ihamidch/Ecommerece}{Repository.}
-    \item \textbf{\href{https://frontend-kappa-amber-29.vercel.app/}{Freelancer Marketplace}} — MERN, jobs and applications. \href{https://github.com/ihamidch/Freelancer-Marketplace}{Repository.}
-    \item \textbf{\href{https://talentscout-ai-web.vercel.app/}{TalentScout AI}} — MERN, resume screening, optional Llama/Groq via \texttt{AI\_ENGINE\_URL}. \href{https://github.com/ihamidch/talentscout-ai}{Repository.}
-    \item \textbf{\href{https://porfolio-ihamidchs-projects.vercel.app/}{Developer portfolio}} — Next.js 15, Framer Motion; highlights MERN deployments and DevOps. \href{https://github.com/ihamidch/porfolio-}{Repository.}
+\textbf{\href{https://github.com/ihamidch/Hybrid-Search-RAG-Engine}{Hybrid Search RAG Engine (AI Retrieval)}} \hfill 2026 \\
+\begin{itemize}
+    \item Developed a high-performance retrieval engine using Python, FastAPI, and LangChain.
+    \item Implemented \textbf{Hybrid Search} logic combining FAISS (semantic) and BM25 (keyword) for accurate LLM context.
+    \item Optimized document chunking and embedding pipelines for Large Language Model (Llama 3.3) integration.
 \end{itemize}
 
-\vspace{6pt}
-
-\textbf{Additional projects} \hfill \\
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item \textbf{\href{https://aqua-insights.vercel.app/}{Aqua Insights}} — Python, ML, water-quality assessment.
-    \item \textbf{\href{https://drive.google.com/file/d/1YGeR2VAcuSMpikYF-UIMuGQRbnowNqrJ/view}{MoodSnap}} — Flutter, Python, AI, image processing.
-    \item \textbf{\href{https://sehat-online-frontend.vercel.app/}{Sehat Online}} — Next.js, MSSQL, NLP chatbot.
+\textbf{\href{https://frontend-kappa-amber-29.vercel.app}{Freelancer Marketplace SaaS Platform}} \hfill 2026 \\
+\begin{itemize}
+    \item Developed a freelance marketplace with client/freelancer role workflows and job application modules.
+    \item Designed structured dashboard interfaces with reusable SaaS UI patterns and modular APIs.
 \end{itemize}
 
-\newpage
-
-\section{Leadership and Extracurricular}
-
-\textbf{Dr. Coders Ambassador} \hfill July 2025 -- Sep 2025 \\
-\textit{Dr. Coders, Pakistan} \\
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item Led student engagement initiatives, coordinated coding activities, and represented Dr. Coders.
+\textbf{\href{https://client-eight-puce-44.vercel.app}{Task Management System}} \hfill 2026 \\
+\begin{itemize}
+    \item Built a collaborative task management application with authenticated CRUD and real-time status updates.
+    \item Implemented workflow-based task states and modular backend APIs with Zod schema validation.
 \end{itemize}
 
-\vspace{6pt}
+\section{Education}
+\textbf{University of Sahiwal (UoS)} \hfill Sahiwal, Pakistan \\
+\textbf{Bachelor of Science in Computer Science (CGPA: 3.47 / 4.0)} \hfill 2021 -- 2025
 
-\textbf{MT bytes Ambassador} \hfill July 2025 -- Oct 2025 \\
-\textit{MT. bytes, Pakistan} \\
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item Demonstrated leadership by organizing peer learning sessions and tech programs.
-\end{itemize}
-
-\vspace{6pt}
-
-\textbf{Microsoft Learn Student Ambassadors (MLSA)} \hfill Oct 2023 -- Dec 2025 \\
-\textit{Beta MLSA} \\
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item Serving as a Beta MLSA, conducting workshops and technical sessions for student engagement.
-\end{itemize}
-
-\vspace{6pt}
-
-\textbf{Microsoft Learn SA -- University of Sahiwal Chapter} \hfill Sep 2024 -- Dec 2025 \\
-\textit{Co Director Team Management} \\
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item Leading the management team of the UoS MLSA chapter, coordinating events, and mentoring peers.
-\end{itemize}
-
-\section{Certifications and Courses}
-\begin{itemize}[noitemsep, topsep=0pt, leftmargin=0.15in]
-    \item \textbf{HCIA -- Huawei AI Certification | Huawei:} Covered fundamentals of AI and machine learning.
-    \item \textbf{Azure Data Scientist Associate | Microsoft:} Model training and deployment.
-    \item \textbf{Data Mining and Business Intelligence | NAVTTC (University of Sahiwal).}
-    \item \textbf{Fundamentals of Agile Project Management | PMI:} Gained understanding of Scrum delivery.
-    \item \textbf{Problem Solving \& SQL | HackerRank:} Strengthened algorithmic thinking and SQL manipulation.
+\section{Certifications}
+\begin{itemize}
+    \item Azure Data Scientist Associate (Microsoft)
+    \item Problem Solving \& SQL (HackerRank)
 \end{itemize}
 
 \end{document}

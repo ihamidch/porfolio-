@@ -1,6 +1,7 @@
 import type { ProjectShowcase } from "@/lib/portfolio-data";
 import {
   freelancerProject,
+  talentscoutProject,
   tasksProject,
 } from "@/lib/portfolio-data";
 
@@ -222,6 +223,35 @@ export const supportingFeaturedProject: SupportingFeaturedProject = {
   apiUrl: tasksProject.apiUrl,
 };
 
+export const aiFeaturedProject: SecondaryFeaturedProject = {
+  label: "FEATURED AI SAAS PROJECT",
+  title: "TalentScout AI Platform",
+  subtitle:
+    "AI-assisted recruitment engine with LLM workflows, RAG-ready architecture, and role-aware dashboards",
+  description:
+    "A production-style AI platform for candidate screening and recruiter workflows, combining MERN foundations with Python/FastAPI-compatible AI service boundaries.",
+  keyFeatures: [
+    "LLM-powered candidate analysis",
+    "RAG-ready architecture",
+    "Recruiter & candidate role workflows",
+    "Dashboard-driven screening pipeline",
+  ],
+  techStack: [
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Python",
+    "FastAPI",
+    "LLMs",
+    "LangChain",
+    "RAG",
+  ],
+  liveUrl: talentscoutProject.liveUrl,
+  repoUrl: talentscoutProject.repoUrl,
+  apiUrl: talentscoutProject.apiUrl,
+};
+
 /** Core three: Task Management, E-commerce, Job Portal (marketplace) */
 export const featuredProjects: FeaturedProject[] = [
   {
@@ -232,5 +262,50 @@ export const featuredProjects: FeaturedProject[] = [
       "Production-grade task workflow app with authenticated workspaces and drag-and-drop board management, deployed with a dedicated API surface.",
     stack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
     gradient: "emerald",
+  },
+];
+
+
+export type AiProjectShowcase = {
+  label: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  stack: string[];
+  repoUrl: string;
+  liveUrl?: string;
+};
+
+export const aiProjectShowcases: AiProjectShowcase[] = [
+  {
+    label: "AI PROJECT",
+    title: "TalentScout AI",
+    subtitle:
+      "AI recruitment engine with LLM and RAG-ready architecture",
+    description:
+      "Full-stack AI platform for recruiter and candidate workflows with FastAPI-compatible AI engine boundaries and production deployment.",
+    stack: ["React", "Node.js", "FastAPI", "LLMs", "RAG", "MongoDB"],
+    repoUrl: "https://github.com/ihamidch/talentscout-ai",
+    liveUrl: "https://talentscout-ai-web.vercel.app",
+  },
+  {
+    label: "AI PROJECT",
+    title: "YouTube AI Context Analyst (RAG)",
+    subtitle:
+      "RAG chatbot for YouTube context understanding",
+    description:
+      "Production-style AI assistant that chats with YouTube video context using FastAPI, LangChain orchestration, and Llama 3.3 via Groq.",
+    stack: ["Python", "FastAPI", "LangChain", "RAG", "FAISS", "Groq"],
+    repoUrl: "https://github.com/ihamidch/YouTube-AI-Context-Analyst-RAG-",
+  },
+  {
+    label: "AI PROJECT",
+    title: "Hybrid Search RAG Engine",
+    subtitle:
+      "Hybrid retrieval with source tracing and persistent memory",
+    description:
+      "Advanced RAG engine combining semantic and keyword retrieval with FastAPI backend and document-aware source citation support.",
+    stack: ["Python", "FastAPI", "LangChain", "FAISS", "Streamlit", "Llama 3.3"],
+    repoUrl: "https://github.com/ihamidch/Hybrid-Search-RAG-Engine",
   },
 ];

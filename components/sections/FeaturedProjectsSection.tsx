@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import {
+  aiFeaturedProject,
+  aiProjectShowcases,
   mainFeaturedProject,
   secondaryFeaturedProject,
   supportingFeaturedProject,
@@ -162,7 +164,7 @@ export function FeaturedProjectsSection() {
         <SectionHeading
           eyebrow="Featured SaaS Projects"
           title="Product-style Project Showcase"
-          description="Clear hierarchy for recruiters: flagship e-commerce platform first, then marketplace and task system highlights."
+          description="Clear hierarchy for recruiters: flagship e-commerce case study, core MERN products, and an AI project spotlight."
         />
       </motion.div>
 
@@ -196,6 +198,82 @@ export function FeaturedProjectsSection() {
             compact
           />
         </div>
+
+        <div className="grid items-start gap-6">
+          <MediumFeaturedCard
+            label={aiFeaturedProject.label}
+            title={aiFeaturedProject.title}
+            subtitle={aiFeaturedProject.subtitle}
+            description={aiFeaturedProject.description}
+            keyFeatures={aiFeaturedProject.keyFeatures}
+            techStack={aiFeaturedProject.techStack}
+            liveUrl={aiFeaturedProject.liveUrl}
+            repoUrl={aiFeaturedProject.repoUrl}
+            apiUrl={aiFeaturedProject.apiUrl}
+            tint="cyan"
+          />
+        </div>
+
+        <div className="space-y-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300/90">
+            Additional AI projects
+          </p>
+          <div className="grid gap-6 lg:grid-cols-3">
+            {aiProjectShowcases.map((project) => (
+              <motion.article
+                key={project.title}
+                {...fadeUp}
+                whileHover={{ y: -5 }}
+                className="overflow-hidden rounded-3xl border border-cyan-400/25 bg-gradient-to-br from-cyan-600/10 via-blue-500/8 to-zinc-950/80 p-1 shadow-xl shadow-cyan-500/10"
+              >
+                <div className="flex h-full flex-col gap-4 rounded-[1.2rem] border border-white/10 bg-zinc-950/90 p-6">
+                  <div className="space-y-3">
+                    <div className="inline-flex items-center rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200">
+                      {project.label}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                    <p className="text-sm font-medium text-cyan-100/90">{project.subtitle}</p>
+                    <p className="text-sm leading-relaxed text-zinc-300">{project.description}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-200/85">Stack</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {project.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-md border border-white/15 bg-white/5 px-2.5 py-1 text-xs font-medium text-zinc-200"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="mt-auto flex flex-wrap gap-3 pt-2">
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-teal-400 px-4 py-2 text-sm font-semibold text-zinc-950 shadow-lg shadow-cyan-500/25 transition hover:brightness-110"
+                      >
+                        Live Demo
+                      </a>
+                    ) : null}
+                    <a
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center rounded-full border border-zinc-500 px-4 py-2 text-sm font-semibold text-zinc-100 transition hover:border-cyan-400/70 hover:bg-white/5"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

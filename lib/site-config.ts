@@ -2,11 +2,11 @@
 export const siteConfig = {
   name: "HAMID RAFIQUE",
   greeting: "Hi, I'm Hamid Rafique 👋",
-  headline: "MERN Stack Developer",
+  headline: "AI + MERN Stack Developer",
   summary:
-    "I build scalable SaaS applications using React, Node.js, and MongoDB.",
+    "I build scalable SaaS and AI-powered applications using React, Node.js, MongoDB, Python, and FastAPI.",
   heroDescription:
-    "Focused on real-world systems like e-commerce platforms, dashboards, and marketplaces.",
+    "Focused on real-world systems like e-commerce platforms, dashboards, marketplaces, and AI recruitment workflows.",
   heroHighlights: [
     { emoji: "🚀", text: "3+ Deployed Projects" },
     { emoji: "💻", text: "Production-ready code" },
